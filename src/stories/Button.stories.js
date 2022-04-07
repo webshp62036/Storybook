@@ -20,12 +20,9 @@ export function Danger(){
         <Button variant="danger">DANGER</Button>
     )
 };
-
-// for success button
-
-export function Success(){
+export function orange(){
     return(
-        <Button variant="success">SUCCESS</Button>
-    )
-}
- 
+<Button size="sm" textColor="blue" bgColor="blue-500">Enable</Button>
+    );
+    };
+

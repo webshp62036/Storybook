@@ -1,13 +1,15 @@
-import React from "react";
-import './Button.css';
+// Button.jsx
+import classnames from 'classnames';
 
-
-// arrow function 
- export default function Button(props){
-     const{variant='primary',children,...rest}=props;
-    return(
-        <button className={'button ${variant}'}  {...rest}>
-            {children}
-        </button>
-    );
+function Button ({size, bgColor, textColor, children}) {
+    return (
+        <button className={classnames("bg-${bgColor} text-${textColor} font-bold py-2 px-4 rounded", {
+    "text-xs": size === 'sm',
+    "text-xl": size === 'lg',
+    })}>
+        {children}
+    </button>
+    )
 };
+
+export default Button;
